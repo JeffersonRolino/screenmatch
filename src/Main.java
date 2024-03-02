@@ -5,9 +5,13 @@ public class Main {
         myMovie.releaseYear = 1972;
         myMovie.durationInMinutes = 175;
 
-        System.out.println(myMovie);
-        System.out.println(myMovie.name);
-        System.out.println(myMovie.releaseYear);
-        System.out.println(myMovie.durationInMinutes);
+        myMovie.showDetails();
+        myMovie.review(8);
+        myMovie.review(9.2);
+        myMovie.review(10);
+
+        System.out.println("Nota do Filme: " + myMovie.rating);
+        System.out.println("Número de Avaliações " + myMovie.numberOfReviews);
+        System.out.printf("Média das Avaliações %.1f", myMovie.getAverageRating());
     }
 }
