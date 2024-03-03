@@ -10,8 +10,8 @@ public class Main {
         myMovie.review(9.2);
         myMovie.review(10);
 
-        System.out.println("Nota do Filme: " + myMovie.rating);
-        System.out.println("Número de Avaliações " + myMovie.numberOfReviews);
+        System.out.println("Nota do Filme: " + myMovie.getRating());
+        System.out.println("Número de Avaliações " + myMovie.getNumberOfReviews());
         System.out.printf("Média das Avaliações %.1f", myMovie.getAverageRating());
     }
 }

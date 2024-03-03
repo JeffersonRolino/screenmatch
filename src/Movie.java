@@ -2,9 +2,18 @@ public class Movie {
     String name;
     int releaseYear;
     boolean includedInPlan;
-    double rating;
-    int numberOfReviews;
+    private double rating;
+    private int numberOfReviews;
     int durationInMinutes;
+
+    double getRating(){
+        return this.rating;
+    }
+
+    int getNumberOfReviews(){
+        return this.numberOfReviews;
+    }
+
 
     void showDetails(){
         System.out.println("Nome do Filme: " + this.name);
