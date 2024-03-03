@@ -1,14 +1,36 @@
 package br.com.alura.screenmatch.models;
 
 public class Movie {
-    String name;
-    int releaseYear;
-    boolean includedInPlan;
+    private String name;
+    private int releaseYear;
+    private boolean isIncludedInPlan;
     private double rating;
     private int numberOfReviews;
-    int durationInMinutes;
+    private int durationInMinutes;
 
-    double getRating(){
+    //Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setReleaseYear(int releaseYear){
+        this.releaseYear = releaseYear;
+    }
+
+    public void setIncludedInPlan(boolean isIncludedInPlan){
+        this.isIncludedInPlan = isIncludedInPlan;
+    }
+
+    public void setDurationInMinutes(int durationInMinutes){
+        this.durationInMinutes = durationInMinutes;
+    }
+
+    //Getters
+    public boolean getIsIncludedInPlan(){
+        return this.isIncludedInPlan;
+    }
+
+    public double getRating(){
         return this.rating;
     }
 
