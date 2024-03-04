@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculo.TimeCalculator;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Series;
 
@@ -9,6 +10,13 @@ public class Main {
         myMovie.setReleaseYear(1972);
         myMovie.setDurationInMinutes(175);
         myMovie.setIncludedInPlan(true);
+
+        Movie backToTheFuture = new Movie();
+        backToTheFuture.setName("Back to the Future");
+        backToTheFuture.setReleaseYear(1985);
+        backToTheFuture.setDurationInMinutes(116);
+        myMovie.setIncludedInPlan(true);
+
 
         myMovie.showDetails();
         myMovie.review(8);
@@ -28,5 +36,12 @@ public class Main {
         lost.setNumberOfEpisodesBySeason(10);
         lost.setMinutesByEpisode(45);
         System.out.println("Duração de Lost em Minutos: " + lost.getDurationInMinutes());
+
+        TimeCalculator calculator = new TimeCalculator();
+
+        calculator.include(myMovie);
+        calculator.include(backToTheFuture);
+        calculator.include(lost);
+        System.out.println(calculator.getTotalTime());
     }
 }
