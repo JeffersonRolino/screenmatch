@@ -6,6 +6,10 @@ public class Series extends Title {
     private int numberOfEpisodesBySeason;
     private int minutesByEpisode;
 
+    public Series(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
+
     public int getSeasons() {
         return seasons;
     }

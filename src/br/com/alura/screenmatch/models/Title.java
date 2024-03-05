@@ -8,6 +8,10 @@ public class Title {
     private double rating;
     private int numberOfReviews;
 
+    public Title(String name, int releaseYear) {
+        this.name = name;
+        this.releaseYear = releaseYear;
+    }
 
     //Setters
     public void setName(String name) {

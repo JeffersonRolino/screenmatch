@@ -9,10 +9,12 @@ import java.util.ArrayList;
 @SuppressWarnings("ALL")
 public class Main {
     public static void main(String[] args) {
-        Movie theGodfather = new Movie("The Godfather", 1972, 175);
+        Movie theGodfather = new Movie("The Godfather", 1972);
+        theGodfather.setDurationInMinutes(175);
         theGodfather.setIncludedInPlan(true);
 
-        Movie backToTheFuture = new Movie("Back to the Future", 1985, 116);
+        Movie backToTheFuture = new Movie("Back to the Future", 1985);
+        theGodfather.setDurationInMinutes(116);
         backToTheFuture.setIncludedInPlan(true);
 
 
@@ -27,9 +29,7 @@ public class Main {
         System.out.printf("Média das Avaliações %.1f", theGodfather.getAverageRating());
         System.out.println();
 
-        Series lost = new Series();
-        lost.setName("Lost");
-        lost.setReleaseYear(2004);
+        Series lost = new Series("Lost", 2004);
         lost.setSeasons(5);
         lost.setNumberOfEpisodesBySeason(10);
         lost.setMinutesByEpisode(45);
@@ -53,10 +53,8 @@ public class Main {
 
         recommendationFilter.filter(episode);
 
-        Movie filmeDoPaulo = new Movie();
-        filmeDoPaulo.setName("Dogville");
+        Movie filmeDoPaulo = new Movie("Dogville", 2003);
         filmeDoPaulo.setDurationInMinutes(200);
-        filmeDoPaulo.setReleaseYear(2003);
         filmeDoPaulo.review(10);
 
         ArrayList<Movie> movies = new ArrayList<Movie>();
