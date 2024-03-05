@@ -72,5 +72,9 @@ public class Main {
 
         System.out.println("Tamanho da lista: " + movies.size());
         System.out.println("Primeiro filme da lista: " + movies.get(0).getName());
+
+        System.out.println("Primeiro filme da lista: " + movies.get(0).toString());
+
+//        System.out.println(movies);
     }
 }
