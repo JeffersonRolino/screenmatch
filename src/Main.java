@@ -9,28 +9,22 @@ import java.util.ArrayList;
 @SuppressWarnings("ALL")
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setName("The Godfather");
-        myMovie.setReleaseYear(1972);
-        myMovie.setDurationInMinutes(175);
-        myMovie.setIncludedInPlan(true);
+        Movie theGodfather = new Movie("The Godfather", 1972, 175);
+        theGodfather.setIncludedInPlan(true);
 
-        Movie backToTheFuture = new Movie();
-        backToTheFuture.setName("Back to the Future");
-        backToTheFuture.setReleaseYear(1985);
-        backToTheFuture.setDurationInMinutes(116);
-        myMovie.setIncludedInPlan(true);
+        Movie backToTheFuture = new Movie("Back to the Future", 1985, 116);
+        backToTheFuture.setIncludedInPlan(true);
 
 
-        myMovie.showDetails();
-        myMovie.review(8);
-        myMovie.review(9.2);
-        myMovie.review(10);
+        theGodfather.showDetails();
+        theGodfather.review(8);
+        theGodfather.review(9.2);
+        theGodfather.review(10);
 
-        System.out.println("Nota do Filme: " + myMovie.getRating());
-        System.out.println("Duração do Filme: " + myMovie.getDurationInMinutes());
-        System.out.println("Número de Avaliações " + myMovie.getNumberOfReviews());
-        System.out.printf("Média das Avaliações %.1f", myMovie.getAverageRating());
+        System.out.println("Nota do Filme: " + theGodfather.getRating());
+        System.out.println("Duração do Filme: " + theGodfather.getDurationInMinutes());
+        System.out.println("Número de Avaliações " + theGodfather.getNumberOfReviews());
+        System.out.printf("Média das Avaliações %.1f", theGodfather.getAverageRating());
         System.out.println();
 
         Series lost = new Series();
@@ -43,13 +37,13 @@ public class Main {
 
         TimeCalculator calculator = new TimeCalculator();
 
-        calculator.include(myMovie);
+        calculator.include(theGodfather);
         calculator.include(backToTheFuture);
         calculator.include(lost);
         System.out.println(calculator.getTotalTime());
 
         RecommendationFilter recommendationFilter = new RecommendationFilter();
-        recommendationFilter.filter(myMovie);
+        recommendationFilter.filter(theGodfather);
 
         Episode episode = new Episode();
         episode.setNumber(1);
@@ -67,7 +61,7 @@ public class Main {
 
         ArrayList<Movie> movies = new ArrayList<Movie>();
         movies.add(filmeDoPaulo);
-        movies.add(myMovie);
+        movies.add(theGodfather);
         movies.add(backToTheFuture);
 
         System.out.println("Tamanho da lista: " + movies.size());
@@ -75,6 +69,8 @@ public class Main {
 
         System.out.println("Primeiro filme da lista: " + movies.get(0).toString());
 
-//        System.out.println(movies);
+        System.out.println(movies);
+
+        Object object = filmeDoPaulo;
     }
 }
