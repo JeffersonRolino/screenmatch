@@ -1,4 +1,6 @@
+import br.com.alura.screenmatch.calculo.RecommendationFilter;
 import br.com.alura.screenmatch.calculo.TimeCalculator;
+import br.com.alura.screenmatch.models.Episode;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Series;
 
@@ -43,5 +45,17 @@ public class Main {
         calculator.include(backToTheFuture);
         calculator.include(lost);
         System.out.println(calculator.getTotalTime());
+
+        RecommendationFilter recommendationFilter = new RecommendationFilter();
+        recommendationFilter.filter(myMovie);
+
+        Episode episode = new Episode();
+        episode.setNumber(1);
+        episode.setSeries(lost);
+        episode.setSeason(1);
+        episode.setTotalViews(300);
+
+        recommendationFilter.filter(episode);
+
     }
 }
