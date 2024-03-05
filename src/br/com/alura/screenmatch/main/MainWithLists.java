@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.models.Series;
 import br.com.alura.screenmatch.models.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainWithLists {
     public static void main(String[] args) {
@@ -17,18 +18,37 @@ public class MainWithLists {
 
         Series lost = new Series("Lost", 2004);
 
-        ArrayList<Title> list = new ArrayList<Title>();
+        ArrayList<Title> titles = new ArrayList<Title>();
 
-        list.add(theGodfather);
-        list.add(backToTheFuture);
-        list.add(dogville);
-        list.add(lost);
+        titles.add(theGodfather);
+        titles.add(backToTheFuture);
+        titles.add(dogville);
+        titles.add(lost);
 
-        for(Title title : list){
+        for(Title title : titles){
             System.out.println(title.getName());
             if(title instanceof Movie movie){
                 System.out.println("Classificação: " + movie.getClassification() + "\n");
             }
         }
+
+        ArrayList<String> searchByArtists = new ArrayList<String>();
+        searchByArtists.add("Brad Pitt");
+        searchByArtists.add("Marlon Brando");
+        searchByArtists.add("Leonardo DiCaprio");
+        searchByArtists.add("Angelina Jolie");
+        searchByArtists.add("Adam Sandler");
+        searchByArtists.add("Daniel Day Lewis");
+
+
+        System.out.println("Antes da ordenação: " + searchByArtists);
+
+        Collections.sort(searchByArtists);
+
+        System.out.println("Depois da ordenação: " + searchByArtists);
+
+        Collections.sort(titles);
+        System.out.println("Lista de títulos ordenados " + titles);
+
     }
 }
