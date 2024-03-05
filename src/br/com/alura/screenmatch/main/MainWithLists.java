@@ -26,8 +26,9 @@ public class MainWithLists {
 
         for(Title title : list){
             System.out.println(title.getName());
-//            Movie movie = (Movie) title;
-//            System.out.println("Classificação " + movie.getClassification());
+            if(title instanceof Movie movie){
+                System.out.println("Classificação: " + movie.getClassification() + "\n");
+            }
         }
     }
 }
