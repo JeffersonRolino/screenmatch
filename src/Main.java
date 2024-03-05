@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.models.Episode;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Series;
 
+import java.util.ArrayList;
+
 @SuppressWarnings("ALL")
 public class Main {
     public static void main(String[] args) {
@@ -57,5 +59,18 @@ public class Main {
 
         recommendationFilter.filter(episode);
 
+        Movie filmeDoPaulo = new Movie();
+        filmeDoPaulo.setName("Dogville");
+        filmeDoPaulo.setDurationInMinutes(200);
+        filmeDoPaulo.setReleaseYear(2003);
+        filmeDoPaulo.review(10);
+
+        ArrayList<Movie> movies = new ArrayList<Movie>();
+        movies.add(filmeDoPaulo);
+        movies.add(myMovie);
+        movies.add(backToTheFuture);
+
+        System.out.println("Tamanho da lista: " + movies.size());
+        System.out.println("Primeiro filme da lista: " + movies.get(0).getName());
     }
 }
