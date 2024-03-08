@@ -47,10 +47,16 @@ public class MainWithSearch {
 
         System.out.println(myTitleOmdb);
 
-        Title title = new Title(myTitleOmdb);
+        try{
+            Title title = new Title(myTitleOmdb);
+            System.out.println("Título já convertido...");
+            System.out.println(title);
+        } catch (NumberFormatException exception){
+            System.out.println("Aconteceu um erro: ");
+            System.out.println(exception.getMessage());
+        }
 
-        System.out.println("Título já convertido...");
-        System.out.println(title);
+        System.out.println("Programa finalizou corretamente...");
 
         scanner.close();
     }
