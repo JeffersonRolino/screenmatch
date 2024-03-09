@@ -2,6 +2,7 @@ package br.com.alura.screenmatch.main;
 
 import br.com.alura.screenmatch.models.Title;
 import br.com.alura.screenmatch.models.TitleOmdb;
+import br.com.alura.screenmatch.exceptions.yearConversionException;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,7 +52,7 @@ public class MainWithSearch {
             Title title = new Title(myTitleOmdb);
             System.out.println("Título já convertido...");
             System.out.println(title);
-        } catch (NumberFormatException exception){
+        } catch (yearConversionException exception){
             System.out.println("Aconteceu um erro: ");
             System.out.println(exception.getMessage());
         }
