@@ -30,3 +30,5 @@ bin/
 
 ### env.Env ###
 /src/env/
+
+movies.txt

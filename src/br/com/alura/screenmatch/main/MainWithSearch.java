@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import env.Env;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -52,6 +53,11 @@ public class MainWithSearch {
             Title title = new Title(myTitleOmdb);
             System.out.println("Título já convertido...");
             System.out.println(title);
+
+            FileWriter fileWriter = new FileWriter("movies.txt");
+            fileWriter.write(title.toString());
+            fileWriter.close();
+
         } catch (yearConversionException exception){
             System.out.println("Aconteceu um erro: ");
             System.out.println(exception.getMessage());
