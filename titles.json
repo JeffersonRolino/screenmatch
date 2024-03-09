@@ -1,0 +1,26 @@
+[
+  {
+    "Title": "The Matrix",
+    "Year": 1999,
+    "DurationInMinutes": 136,
+    "IsIncludedInPlan": false,
+    "Rating": 0.0,
+    "NumberOfReviews": 0
+  },
+  {
+    "Title": "Avatar",
+    "Year": 2009,
+    "DurationInMinutes": 162,
+    "IsIncludedInPlan": false,
+    "Rating": 0.0,
+    "NumberOfReviews": 0
+  },
+  {
+    "Title": "Dogville",
+    "Year": 2003,
+    "DurationInMinutes": 178,
+    "IsIncludedInPlan": false,
+    "Rating": 0.0,
+    "NumberOfReviews": 0
+  }
+]
